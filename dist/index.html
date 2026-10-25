@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#09090d" />
+    <meta name="description" content="TRX Community Rewards campaign participation page." />
+    <title>TRX Community Rewards</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/safari-guide.css" />
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/safari-guide.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-glow page-glow--top" aria-hidden="true"></div>
+    <div class="page-glow page-glow--bottom" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="campaign-bar reveal">
+        <span class="campaign-bar__pulse" aria-hidden="true"></span>
+        <span data-i18n="campaignBar">TRX COMMUNITY REWARDS</span>
+        <span class="campaign-bar__live" data-i18n="live">LIVE</span>
+      </header>
+
+      <section class="hero reveal" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <span class="orbit orbit--one"></span>
+          <span class="orbit orbit--two"></span>
+          <span class="node node--one"></span>
+          <span class="node node--two"></span>
+          <span class="node node--three"></span>
+          <div class="trx-coin">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <path d="M16 17 58 25 30 57 16 17Zm4.8 4.6 10.4 28.7 20.5-22.7-30.9-6Zm12.6 26.8L22.6 23.8l26 3.4-15.2 21.2Z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="eyebrow"><span data-i18n="communityCampaign">Community campaign</span></div>
+        <h1 id="hero-title" data-i18n="heroTitle">Claim Free TRX</h1>
+        <p class="hero__subtitle" data-i18n="heroSubtitle">TRX Community Rewards is now open. Join in a few simple steps while availability lasts.</p>
+
+        <ul class="benefit-list" aria-label="Campaign highlights" data-i18n-aria-label="benefitsLabel">
+          <li><span class="check" aria-hidden="true">✓</span><span data-i18n="benefitOne">Claim TRX at no cost</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span data-i18n="benefitTwo">Simple steps, easy to join</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span data-i18n="benefitThree">Limited availability</span></li>
+        </ul>
+        <p class="hero__fineprint" data-i18n="eligibilityNote">Rewards are distributed according to campaign rules and eligibility.</p>
+      </section>
+
+      <aside class="safety-card reveal" aria-labelledby="safety-title">
+        <div class="safety-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2.6 20 6v5.2c0 5.1-3.4 9.3-8 10.6-4.6-1.3-8-5.5-8-10.6V6l8-3.4Zm0 4.2v10.7m-3.2-5.2L11 14.5l4.5-5" /></svg>
+        </div>
+        <div>
+          <h2 id="safety-title" data-i18n="safetyTitle">Participate safely</h2>
+          <p data-i18n="safetyText">Use the campaign’s designated channel. We will never ask for your private key, recovery phrase, or a transfer to an unknown address. Review the campaign rules before joining.</p>
+        </div>
+      </aside>
+
+      <section class="glass-card details-card reveal" aria-labelledby="details-title">
+        <div class="section-heading">
+          <div><p class="section-kicker" data-i18n="overview">OVERVIEW</p><h2 id="details-title" data-i18n="detailsTitle">Campaign details</h2></div>
+          <span class="status-pill"><i aria-hidden="true"></i><span data-i18n="active">Active</span></span>
+        </div>
+        <dl class="detail-grid">
+          <div><dt data-i18n="rewardAsset">Reward asset</dt><dd data-config="rewardAsset">TRX</dd></div>
+          <div><dt data-i18n="rewardPool">Reward pool</dt><dd class="accent" data-config="rewardPool">50,000 TRX</dd></div>
+          <div><dt data-i18n="eligibleUsers">Who can join</dt><dd data-i18n="eligibleUsersValue">Community users who meet the campaign rules</dd></div>
+          <div><dt data-i18n="participation">How to join</dt><dd data-i18n="participationValue">Enter an email and complete the subscription</dd></div>
+          <div><dt data-i18n="delivery">Delivery</dt><dd data-i18n="deliveryValue">Campaign and claim information by email</dd></div>
+          <div><dt data-i18n="campaignStatus">Campaign status</dt><dd data-i18n="ongoing">Ongoing</dd></div>
+        </dl>
+      </section>
+
+      <section class="flow-section reveal" aria-labelledby="flow-title">
+        <div class="section-heading section-heading--plain">
+          <div><p class="section-kicker" data-i18n="fourSteps">4 SIMPLE STEPS</p><h2 id="flow-title" data-i18n="flowTitle">How it works</h2></div>
+        </div>
+        <ol class="step-flow">
+          <li><span class="step-flow__number">01</span><span class="step-flow__icon">@</span><strong data-i18n="stepOne">Enter email</strong></li>
+          <li><span class="step-flow__number">02</span><span class="step-flow__icon">↗</span><strong data-i18n="stepTwo">Tap claim</strong></li>
+          <li><span class="step-flow__number">03</span><span class="step-flow__icon">✓</span><strong data-i18n="stepThree">Subscribe</strong></li>
+          <li><span class="step-flow__number">04</span><span class="step-flow__icon">✦</span><strong data-i18n="stepFour">Watch your inbox</strong></li>
+        </ol>
+      </section>
+
+      <section class="glass-card claim-card reveal" aria-labelledby="claim-title">
+        <span class="claim-card__tag" data-i18n="limitedReward">LIMITED REWARD</span>
+        <h2 id="claim-title" data-i18n="claimTitle">Start your claim</h2>
+        <p data-i18n="claimSubtitle">Enter your email to continue to the subscription step.</p>
+        <form id="claim-form" novalidate>
+          <label for="email" data-i18n="emailLabel">Email address</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h18v11H3v-11Zm1.5 1L12 13l7.5-5.5" /></svg>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" data-i18n-placeholder="emailPlaceholder" placeholder="Enter your email address" aria-describedby="email-error privacy-note" />
+          </div>
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+          <button class="primary-button" id="claim-button" type="submit" data-business-action>
+            <span class="button-label" data-i18n="claimNow">Claim now</span>
+            <span class="button-loader" aria-hidden="true"></span>
+          </button>
+          <p class="privacy-note" id="privacy-note"><span aria-hidden="true">⌁</span><span data-i18n="privacyNote">Your email stays in this browser and is not sent by this page.</span></p>
+        </form>
+      </section>
+
+      <footer class="site-footer reveal">
+        <div class="brand-lockup"><span class="brand-mark" aria-hidden="true">△</span><span data-config="communityName">TRX Community</span></div>
+        <p data-i18n="footerNote">Community campaign • Participation is subject to eligibility and campaign rules.</p>
+      </footer>
+    </main>
+
+    <div class="modal" id="claim-modal" hidden>
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" tabindex="-1">
+        <button class="icon-button modal__close" type="button" data-close-modal data-i18n-aria-label="close">×</button>
+        <div class="modal__status-icon" aria-hidden="true">✓</div>
+        <p class="section-kicker" data-i18n="requestReady">REQUEST READY</p>
+        <h2 id="modal-title" data-i18n="modalTitle">Complete subscription to continue</h2>
+        <p id="modal-description" data-i18n="modalDescription">Open the community page and complete your subscription to continue the TRX claim process.</p>
+        <div class="handoff-visual">
+          <div class="handoff-card"><span class="handoff-card__icon">@</span><small data-i18n="yourEmail">YOUR EMAIL</small><strong id="modal-email">user@example.com</strong></div>
+          <span class="handoff-arrow" aria-hidden="true">→</span>
+          <div class="handoff-card handoff-card--community"><span class="brand-mark brand-mark--large">△</span><small data-i18n="community">COMMUNITY</small><strong data-config="communityName">TRX Community</strong></div>
+        </div>
+        <button class="primary-button" id="subscribe-button" type="button" data-business-action><span data-i18n="subscribeClaim">Subscribe & continue</span><span aria-hidden="true">↗</span></button>
+        <p class="modal__note" data-i18n="modalNote">Campaign updates and distribution information will be sent by email.</p>
+      </section>
+    </div>
+
+    <div class="toast" id="status-toast" role="status" aria-live="polite" hidden>
+      <span class="toast__icon" aria-hidden="true">✓</span>
+      <div><strong data-i18n="recordedTitle">Claim request recorded</strong><p data-i18n="recordedText">Please watch your inbox for campaign updates.</p></div>
+      <button type="button" class="icon-button" data-close-toast data-i18n-aria-label="close">×</button>
+    </div>
+
+    <div class="safari-mini" id="safari-mini" role="region" aria-labelledby="mini-title" hidden>
+      <button class="icon-button safari-mini__close" type="button" data-mini-close data-i18n-aria-label="close">×</button>
+      <div class="safari-icon" aria-hidden="true">⌁</div>
+      <div class="safari-mini__copy"><strong id="mini-title" data-i18n="miniTitle">Open in Safari</strong><p data-i18n="miniText">Continue this campaign in Safari.</p></div>
+      <div class="safari-mini__actions">
+        <button class="safari-button" type="button" data-mini-open data-i18n="openSafari">Open Safari</button>
+        <button class="text-button" type="button" data-copy-link data-i18n="copyLink">Copy link</button>
+      </div>
+    </div>
+
+    <div class="safari-full" id="safari-full" hidden>
+      <div class="safari-full__backdrop"></div>
+      <section class="safari-full__panel" role="dialog" aria-modal="true" aria-labelledby="full-title" aria-describedby="full-description" tabindex="-1">
+        <button class="icon-button safari-full__close" type="button" data-full-close data-i18n-aria-label="close">×</button>
+        <div class="safari-compass" aria-hidden="true"><span>↗</span></div>
+        <p class="section-kicker" data-i18n="browserRequired">BROWSER REQUIRED</p>
+        <h2 id="full-title" data-i18n="fullTitle">Continue in Safari</h2>
+        <p id="full-description" data-i18n="fullText">To complete the claim process, open this page in Safari.</p>
+        <ol class="guide-steps">
+          <li><span>1</span><div><strong data-i18n="copyCurrentLink">Copy this page link</strong><p data-i18n="copyCurrentLinkText">All campaign parameters will be preserved.</p></div></li>
+          <li><span>2</span><div><strong data-i18n="openSafariStep">Open Safari</strong><p data-i18n="openSafariStepText">Find Safari on your device.</p></div></li>
+          <li><span>3</span><div><strong data-i18n="pasteVisit">Paste and visit</strong><p data-i18n="pasteVisitText">Paste the link into Safari’s address bar.</p></div></li>
+        </ol>
+        <button class="primary-button" type="button" data-full-open hidden><span data-i18n="openInSafari">Open in Safari</span><span aria-hidden="true">↗</span></button>
+        <button class="secondary-button" type="button" data-copy-link><span data-i18n="copyLink">Copy link</span><span aria-hidden="true">⧉</span></button>
+        <p class="copy-feedback" data-copy-feedback aria-live="polite"></p>
+      </section>
+    </div>
+
+    <noscript><div class="noscript">JavaScript is required to use this campaign page.</div></noscript>
+  </body>
+</html>
