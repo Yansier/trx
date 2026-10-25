@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#09090d" />
     <meta name="description" content="TRX Community Rewards campaign participation page." />
     <title>TRX Community Rewards</title>
+    <link rel="icon" href="assets/images/trx-core.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/app.css" />
     <link rel="stylesheet" href="assets/css/safari-guide.css" />
     <script src="assets/js/config.js" defer></script>
@@ -25,17 +26,23 @@
       </header>
 
       <section class="hero reveal" aria-labelledby="hero-title">
+        <span class="hud-corner hud-corner--top" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner--bottom" aria-hidden="true"></span>
         <div class="hero-art" aria-hidden="true">
-          <span class="orbit orbit--one"></span>
-          <span class="orbit orbit--two"></span>
-          <span class="node node--one"></span>
-          <span class="node node--two"></span>
-          <span class="node node--three"></span>
-          <div class="trx-coin">
-            <svg viewBox="0 0 72 72" aria-hidden="true">
-              <path d="M16 17 58 25 30 57 16 17Zm4.8 4.6 10.4 28.7 20.5-22.7-30.9-6Zm12.6 26.8L22.6 23.8l26 3.4-15.2 21.2Z" />
-            </svg>
-          </div>
+          <span class="reactor-grid"></span>
+          <span class="energy-beam"></span>
+          <span class="orbit orbit--primary"></span>
+          <span class="orbit orbit--secondary"></span>
+          <span class="orbit orbit--vertical"></span>
+          <span class="orbit orbit--dashed"></span>
+          <span class="scanner-ring"></span>
+          <span class="node node--one"></span><span class="node node--two"></span>
+          <span class="node node--three"></span><span class="node node--four"></span>
+          <span class="node node--five"></span><span class="node node--six"></span>
+          <span class="node node--seven"></span>
+          <span class="particle particle--one"></span><span class="particle particle--two"></span>
+          <span class="particle particle--three"></span>
+          <div class="energy-core"><img src="assets/images/trx-core.svg" alt="" /></div>
         </div>
 
         <div class="eyebrow"><span data-i18n="communityCampaign">Community campaign</span></div>
@@ -80,10 +87,10 @@
           <div><p class="section-kicker" data-i18n="fourSteps">4 SIMPLE STEPS</p><h2 id="flow-title" data-i18n="flowTitle">How it works</h2></div>
         </div>
         <ol class="step-flow">
-          <li><span class="step-flow__number">01</span><span class="step-flow__icon">@</span><strong data-i18n="stepOne">Enter email</strong></li>
-          <li><span class="step-flow__number">02</span><span class="step-flow__icon">↗</span><strong data-i18n="stepTwo">Tap claim</strong></li>
-          <li><span class="step-flow__number">03</span><span class="step-flow__icon">✓</span><strong data-i18n="stepThree">Subscribe</strong></li>
-          <li><span class="step-flow__number">04</span><span class="step-flow__icon">✦</span><strong data-i18n="stepFour">Watch your inbox</strong></li>
+          <li><span class="step-flow__number">01</span><span class="step-flow__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></span><strong data-i18n="stepOne">Enter email</strong></li>
+          <li><span class="step-flow__number">02</span><span class="step-flow__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5m-8 0h8v8"/><path d="M5 8v11h11" opacity=".5"/></svg></span><strong data-i18n="stepTwo">Tap claim</strong></li>
+          <li><span class="step-flow__number">03</span><span class="step-flow__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3.5 19c.4-3.4 2.2-5.2 5.5-5.2 2 0 3.5.7 4.4 2"/><path d="m15 17 2 2 4-5"/></svg></span><strong data-i18n="stepThree">Subscribe</strong></li>
+          <li><span class="step-flow__number">04</span><span class="step-flow__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="m4.5 8 7.5 5.5L19.5 8"/><path d="M18 3v3m-2-1h4"/></svg></span><strong data-i18n="stepFour">Watch your inbox</strong></li>
         </ol>
       </section>
 
@@ -102,12 +109,12 @@
             <span class="button-label" data-i18n="claimNow">Claim now</span>
             <span class="button-loader" aria-hidden="true"></span>
           </button>
-          <p class="privacy-note" id="privacy-note"><span aria-hidden="true">⌁</span><span data-i18n="privacyNote">Your email stays in this browser and is not sent by this page.</span></p>
         </form>
       </section>
 
       <footer class="site-footer reveal">
-        <div class="brand-lockup"><span class="brand-mark" aria-hidden="true">△</span><span data-config="communityName">TRX Community</span></div>
+        <div class="footer-energy-line" aria-hidden="true"><i></i></div>
+        <div class="brand-lockup"><img class="footer-core" src="assets/images/trx-core.svg" alt="" /><span data-config="communityName">TRX Community</span></div>
         <p data-i18n="footerNote">Community campaign • Participation is subject to eligibility and campaign rules.</p>
       </footer>
     </main>
@@ -123,7 +130,7 @@
         <div class="handoff-visual">
           <div class="handoff-card"><span class="handoff-card__icon">@</span><small data-i18n="yourEmail">YOUR EMAIL</small><strong id="modal-email">user@example.com</strong></div>
           <span class="handoff-arrow" aria-hidden="true">→</span>
-          <div class="handoff-card handoff-card--community"><span class="brand-mark brand-mark--large">△</span><small data-i18n="community">COMMUNITY</small><strong data-config="communityName">TRX Community</strong></div>
+          <div class="handoff-card handoff-card--community"><span class="energy-core-mini"><img src="assets/images/trx-core.svg" alt="" /></span><small data-i18n="community">COMMUNITY</small><strong data-config="communityName">TRX Community</strong></div>
         </div>
         <button class="primary-button" id="subscribe-button" type="button" data-business-action><span data-i18n="subscribeClaim">Subscribe & continue</span><span aria-hidden="true">↗</span></button>
         <p class="modal__note" data-i18n="modalNote">Campaign updates and distribution information will be sent by email.</p>
