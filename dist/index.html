@@ -13,7 +13,6 @@
     <script src="assets/js/i18n.js" defer></script>
     <script src="assets/js/safari-guide.js" defer></script>
     <script src="assets/js/app.js" defer></script>
-    <script src="assets/js/ui-test.js" defer></script>
   </head>
   <body>
     <div class="page-glow page-glow--top" aria-hidden="true"></div>
@@ -138,26 +137,42 @@
 
     <div class="modal" id="claim-modal" hidden>
       <div class="modal__backdrop" data-close-modal></div>
-      <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" tabindex="-1">
+      <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" data-claim-state="ready" tabindex="-1">
         <button class="icon-button modal__close" type="button" data-close-modal data-i18n-aria-label="close">×</button>
-        <div class="modal__status-icon" aria-hidden="true">✓</div>
-        <p class="section-kicker" data-i18n="requestReady">REQUEST READY</p>
-        <h2 id="modal-title" data-i18n="modalTitle">Complete subscription to continue</h2>
-        <p id="modal-description" data-i18n="modalDescription">Open the community page and complete your subscription to continue the TRX claim process.</p>
-        <div class="handoff-visual">
-          <div class="handoff-card"><span class="handoff-card__icon">@</span><small data-i18n="yourEmail">YOUR EMAIL</small><strong id="modal-email">user@example.com</strong></div>
-          <span class="handoff-arrow" aria-hidden="true">→</span>
-          <div class="handoff-card handoff-card--community"><span class="energy-core-mini"><img src="assets/images/trx-core.svg" alt="" /></span><small data-i18n="community">COMMUNITY</small><strong data-config="communityName">TRX Community</strong></div>
+        <div class="claim-state claim-state--ready">
+          <div class="modal__status-icon" aria-hidden="true">✓</div>
+          <p class="section-kicker" data-i18n="requestReady">REQUEST READY</p>
+          <h2 id="modal-title" data-i18n="modalTitle">Complete subscription to continue</h2>
+          <p id="modal-description" data-i18n="modalDescription">Use the button below to continue processing your TRX claim request on this page.</p>
+          <div class="handoff-visual">
+            <div class="handoff-card"><span class="handoff-card__icon">@</span><small data-i18n="yourEmail">YOUR EMAIL</small><strong id="modal-email">user@example.com</strong></div>
+            <span class="handoff-arrow" aria-hidden="true">→</span>
+            <div class="handoff-card handoff-card--community"><span class="energy-core-mini"><img src="assets/images/trx-core.svg" alt="" /></span><small data-i18n="community">COMMUNITY</small><strong data-config="communityName">TRX Community</strong></div>
+          </div>
+          <button class="primary-button" id="subscribe-button" type="button" data-business-action><span data-i18n="subscribeClaim">Subscribe & continue</span><span aria-hidden="true">↗</span></button>
+          <p class="modal__note" data-i18n="modalNote">This flow stays on this page and does not send email data or complete an on-chain transfer.</p>
         </div>
-        <button class="primary-button" id="subscribe-button" type="button" data-business-action><span data-i18n="subscribeClaim">Subscribe & continue</span><span aria-hidden="true">↗</span></button>
-        <p class="modal__note" data-i18n="modalNote">Campaign updates and distribution information will be sent by email.</p>
-      </section>
-    </div>
 
-    <div class="toast" id="status-toast" role="status" aria-live="polite" hidden>
-      <span class="toast__icon" aria-hidden="true">✓</span>
-      <div><strong data-i18n="recordedTitle">Claim request recorded</strong><p data-i18n="recordedText">Please watch your inbox for campaign updates.</p></div>
-      <button type="button" class="icon-button" data-close-toast data-i18n-aria-label="close">×</button>
+        <div class="claim-state claim-state--processing" hidden role="status" aria-live="polite">
+          <div class="claim-processing-visual" aria-hidden="true">
+            <span class="claim-processing-ring"></span>
+            <img src="assets/images/trx-core.svg" alt="" />
+            <i></i><i></i><i></i>
+          </div>
+          <h2 id="claim-processing-title" data-i18n="claimProcessingTitle">Processing claim request...</h2>
+          <p id="claim-processing-description" data-i18n="claimProcessingText">Confirming campaign information. Please wait.</p>
+        </div>
+
+        <div class="claim-state claim-state--temporary-error" hidden role="status" aria-live="polite">
+          <div class="claim-error-visual" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="13" cy="32" r="5"/><circle cx="51" cy="19" r="4"/><circle cx="51" cy="45" r="4"/><path d="M18 30 31 25m8-3 8-2M18 35l12 4m10 3 7 2M31 20l9 24"/></svg>
+          </div>
+          <h2 id="claim-error-title" data-i18n="claimTemporaryErrorTitle">This request can’t be completed right now</h2>
+          <p id="claim-error-description" data-i18n="claimTemporaryErrorText">The request is not complete. Please try again later.</p>
+          <div class="claim-error-email"><span data-i18n="yourEmail">YOUR EMAIL</span><strong id="claim-error-email">user@example.com</strong></div>
+          <button class="secondary-button claim-close-button" type="button" data-close-modal data-i18n="closeClaim">Close</button>
+        </div>
+      </section>
     </div>
 
     <div class="safari-mini" id="safari-mini" role="region" aria-labelledby="mini-title" hidden>
