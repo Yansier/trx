@@ -87,6 +87,18 @@
       if (event.target.closest('[data-close-toast]')) { toast.classList.remove('is-visible'); window.setTimeout(() => { toast.hidden = true; }, 220); }
     });
 
+    document.querySelectorAll('[data-scroll-to-claim]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const claimSection = document.getElementById('claim-section');
+        if (!claimSection) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        claimSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+        claimSection.classList.remove('is-highlighted');
+        requestAnimationFrame(() => claimSection.classList.add('is-highlighted'));
+        window.setTimeout(() => claimSection.classList.remove('is-highlighted'), 1200);
+      });
+    });
+
     const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
       entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); revealObserver.unobserve(entry.target); } });
     }, { threshold: 0.08 }) : null;
